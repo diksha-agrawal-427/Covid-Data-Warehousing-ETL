@@ -10,5 +10,11 @@
 - [la_crime](https://data.lacity.org/A-Safe-City/Crime-Data-from-2020-to-Present/2nrs-mtv8)
 
 # Government Response data
+# todo: comparing both datasets and check merging possiblities. 
 - [Oxford COVID-19 Government Response Tracker](https://covidtracker.bsg.ox.ac.uk/)
+    - already in the data model map 
 - [ACAPS COVID-19: Government Measures Dataset](https://data.humdata.org/dataset/acaps-covid19-government-measures-dataset)
+    - region
+    - category
+    - measure
+    - targeted group
