@@ -1,0 +1,7 @@
+# all hidden files
+.*
+!.gitignore
+
+# ignore git dir
+Datasets/covid-19-nytimes/
+Datasets/crimes/*.csv
