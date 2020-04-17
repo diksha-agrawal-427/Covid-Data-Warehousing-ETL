@@ -6,8 +6,8 @@
 - [The Covid Tracking Project](https://covidtracking.com/api)
 
 # Crime data
-[austin_crime](https://data.austintexas.gov/Public-Safety/Crime-Reports/fdj4-gpfu)
-[la_crime](https://data.lacity.org/A-Safe-City/Crime-Data-from-2020-to-Present/2nrs-mtv8)
+- [austin_crime](https://data.austintexas.gov/Public-Safety/Crime-Reports/fdj4-gpfu)
+- [la_crime](https://data.lacity.org/A-Safe-City/Crime-Data-from-2020-to-Present/2nrs-mtv8)
 
 # Government Response data
 - [Oxford COVID-19 Government Response Tracker](https://covidtracker.bsg.ox.ac.uk/)
