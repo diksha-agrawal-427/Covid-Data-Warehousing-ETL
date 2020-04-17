@@ -1,5 +1,3 @@
-
-
 # Covid | Tests data
 - [] todo: comparing both datasets and check merging possiblities. 
 - [ECDC](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide)
