@@ -1,11 +1,12 @@
 
 
-# Covid data
+# Covid | Tests data
+- [] todo: comparing both datasets and check merging possiblities. 
 - [ECDC](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide)
 - [ESRI](https://coronavirus-disasterresponse.hub.arcgis.com/datasets/628578697fb24d8ea4c32fa0c5ae1843_0?geometry=103.260%2C22.406%2C29.256%2C64.233)
 - [The Covid Tracking Project](https://covidtracking.com/api)
 - [nytimes](https://github.com/nytimes/covid-19-data)
-
+- [Total COVID-19 tests performed by country](https://data.humdata.org/dataset/total-covid-19-tests-performed-by-country)
 
 # Crime data
 - [] todo: comparing both datasets and check merging possiblities. 
