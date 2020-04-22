@@ -361,22 +361,35 @@
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>Y</insertScript>
-      <script>export Downloads_DIR='/Users/alexw/Desktop/covid-project/datasets'
-export f='covid-19-nytimes'
+      <script>function pull_datasets {
 
-if [[ ! -d "$Downloads_DIR/$f" ]]
-then
-    cd $Downloads_DIR
-    git clone https://github.com/nytimes/covid-19-data.git $f
-fi
+	if [[ ! -d "$DATA_DIR/$1" ]]
+	then	
+	    cd $DATA_DIR
+	    git clone  $2 $1
+	fi
+	cd $DATA_DIR/$1; git pull
 
-cd $Downloads_DIR/$f; git pull</script>
+}
+
+# set download path 
+export DATA_DIR='/Users/alexw/Desktop/Covid-Data-Warehousing-ETL/2_Datasets'
+
+
+export REPO_DIR='nCoV-nytimes'
+pull_datasets $REPO_DIR   https://github.com/nytimes/covid-19-data.git
+
+export REPO_DIR='nCoV-beoutbreakprepared'
+pull_datasets $REPO_DIR https://github.com/beoutbreakprepared/nCoV2019.git
+
+
+</script>
       <loglevel>Basic</loglevel>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>192</xloc>
-      <yloc>336</yloc>
+      <xloc>160</xloc>
+      <yloc>320</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -488,7 +501,9 @@ WHERE a.seq = b.max_seq AND a.state = b.state;
       <attributes />
       <sql>DROP TABLE IF EXISTS nytimes_covid_states;
 DROP TABLE IF EXISTS nytimes_covid_counties;
+DROP TABLE IF EXISTS nCoV_beoutbreakprepared;
 DROP TABLE IF EXISTS crime_chicago;
+
 
 CREATE TABLE itmd526.nytimes_covid_states
 (
@@ -532,7 +547,46 @@ CREATE TABLE itmd526.crime_chicago
 , LONGITUDE DOUBLE
 , LOCATION VARCHAR(100)
 )
-;</sql>
+;
+
+
+
+CREATE TABLE itmd526.nCoV_beoutbreakprepared
+(
+    id                       varchar(11)     NULL,
+    age                      bigint          NULL,
+    sex                      varchar(6)      NULL,
+    city                     varchar(73)     NULL,
+    province                 varchar(19)     NULL,
+    country                  varchar(9)      NULL,
+    latitude                 decimal(18, 15) NULL,
+    longitude                decimal(18, 14) NULL,
+    geo_resolution           varchar(6)      NULL,
+    date_onset_symptoms      varchar(200)          NULL,
+    date_admission_hospital  varchar(200)          NULL,
+    date_confirmation        varchar(200)          NULL,
+    symptoms                 varchar(200)        NULL,
+    lives_in_wuhan           varchar(200)        NULL,
+    travel_history_dates     varchar(23)     NULL,
+    travel_history_location  varchar(44)     NULL,
+    reported_market_exposure varchar(200)        NULL,
+    additional_information   varchar(183)    NULL,
+    chronic_disease_binary   varchar(200)      NULL,
+    chronic_disease          varchar(200)        NULL,
+    source                   varchar(400)    NULL,
+    sequence_available       varchar(200)        NULL,
+    outcome                  varchar(46)     NULL,
+    date_death_or_discharge  varchar(200)          NULL,
+    notes_for_discussion     varchar(200)    NULL,
+    location                 varchar(39)     NULL,
+    admin3                   varchar(17)     NULL,
+    admin2                   varchar(18)     NULL,
+    admin1                   varchar(19)     NULL,
+    country_new              varchar(9)      NULL,
+    admin_id                 double          NULL,
+    data_moderator_initials  varchar(200)        NULL,
+    travel_history_binary    varchar(200)        NULL
+);</sql>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename />
@@ -661,8 +715,8 @@ DELETE
  WHERE cnt_week_confirmed &lt;= 0
 ;
 </note>
-      <xloc>592</xloc>
-      <yloc>0</yloc>
+      <xloc>640</xloc>
+      <yloc>16</yloc>
       <width>1054</width>
       <heigth>1135</heigth>
       <fontname>OperatorMono-Book</fontname>
@@ -681,20 +735,18 @@ DELETE
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>export DATA_DIR='/Users/alexw/Desktop/covid-project/datasets'
-export f='covid-19-nytimes'
+      <note>*** open [git pull] script and change DATA_DIR env *** 
 
-if [[ ! -d "$DATA_DIR/$f" ]]
-then
-    cd $DATA_DIR
-    git clone https://github.com/nytimes/covid-19-data.git $f
-fi
+DATA_DIR='path_to/Covid-Data-Warehousing-ETL/2_Datasets'
 
-cd $DATA_DIR/$f; git pull</note>
-      <xloc>64</xloc>
-      <yloc>416</yloc>
-      <width>447</width>
-      <heigth>160</heigth>
+For example(absolute path): 
+'/Users/alexw/Desktop/Covid-Data-Warehousing-ETL/2_Datasets'
+
+</note>
+      <xloc>32</xloc>
+      <yloc>448</yloc>
+      <width>440</width>
+      <heigth>130</heigth>
       <fontname>OperatorMono-Book</fontname>
       <fontsize>13</fontsize>
       <fontbold>N</fontbold>

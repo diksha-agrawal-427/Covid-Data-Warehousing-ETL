@@ -3,6 +3,7 @@
 !.gitignore
 
 # ignore git dir
+2_Datasets/
 2_Datasets/covid-19-nytimes/
 2_Datasets/crimes/*.csv
 6_Reporting/alexw
