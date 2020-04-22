@@ -9,4 +9,4 @@
 ## Grain
 One row represents the daily impact of COVID-19 for a location worldwide.
 
-![data_model](https://github.com/Illinois-Tech-Projects/Covid-Data-Warehousing-ETL/blob/master/2_Data_Modeling/covid_modelV2_1.png)
+![data_model](https://github.com/Illinois-Tech-Projects/Covid-Data-Warehousing-ETL/blob/master/4_Data_Modeling/covid_modelV2_1.png?raw=true)
