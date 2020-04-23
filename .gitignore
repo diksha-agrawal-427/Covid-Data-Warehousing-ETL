@@ -4,5 +4,5 @@
 
 # ignore git dir
 2_Datasets/covid-19-nytimes/
-2_Datasets/crimes/*.csv
+2_Datasets
 6_Reporting/alexw
