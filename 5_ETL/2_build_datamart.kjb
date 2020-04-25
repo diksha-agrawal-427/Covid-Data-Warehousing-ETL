@@ -4,6 +4,7 @@
   <description />
   <extended_description />
   <job_version />
+  <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
   <created_date>2020/04/08 19:24:23.553</created_date>
@@ -388,8 +389,8 @@ pull_datasets $REPO_DIR https://github.com/beoutbreakprepared/nCoV2019.git
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>160</xloc>
-      <yloc>320</yloc>
+      <xloc>208</xloc>
+      <yloc>272</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -480,7 +481,13 @@ GROUP BY state) b
 WHERE a.seq = b.max_seq AND a.state = b.state;
 
 
-
+CREATE OR REPLACE VIEW us_new_cases_summary as
+SELECT DISTINCT `date`, 
+IFNULL(sum(new_cases) over (PARTITION BY date), 
+(SELECT sum(`cases`) FROM nytimes_covid_states_day_seq where seq=1) ) AS us_new_cases, 
+'US' AS city
+FROM nytime_daily_state_newcases;
+SELECT * FROM us_new_cases_summary;
 </sql>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
@@ -611,15 +618,6 @@ CREATE TABLE itmd526.nCoV_beoutbreakprepared
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>extract</from>
-      <to>SQL</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>git pull</from>
       <to>clean db</to>
       <from_nr>0</from_nr>
@@ -631,6 +629,15 @@ CREATE TABLE itmd526.nCoV_beoutbreakprepared
     <hop>
       <from>clean db</from>
       <to>extract</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>extract</from>
+      <to>SQL</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

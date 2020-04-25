@@ -530,7 +530,7 @@ DATA_DIR='/Users/alexw/Desktop/Covid-Data-Warehousing-ETL/2_Datasets'</note>
     <hop>
       <from>crime_chicago</from>
       <to>save_crime_chicago</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
   </order>
   <step>
@@ -917,7 +917,7 @@ DATA_DIR='/Users/alexw/Desktop/Covid-Data-Warehousing-ETL/2_Datasets'</note>
     <length>Characters</length>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>${DATA_DIR}/nCoV-nytimes/us-counties.csv</name>
+      <name>/Users/alexw/Desktop/Covid-Data-Warehousing-ETL/2_Datasets/nCoV-nytimes/us-states.csv</name>
       <filemask />
       <exclude_filemask />
       <file_required>N</file_required>
@@ -1097,7 +1097,7 @@ DATA_DIR='/Users/alexw/Desktop/Covid-Data-Warehousing-ETL/2_Datasets'</note>
     <length>Characters</length>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>${DATA_DIR}/nCoV-nytimes/us-states.csv</name>
+      <name>/Users/alexw/Desktop/Covid-Data-Warehousing-ETL/2_Datasets/nCoV-nytimes/us-states.csv</name>
       <filemask />
       <exclude_filemask />
       <file_required>N</file_required>
