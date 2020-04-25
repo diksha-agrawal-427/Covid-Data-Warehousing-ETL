@@ -69,15 +69,18 @@ we only needed three attribute `date_of_occurrence`, `categorry` and `city`
 
 ![pulling_functions](https://github.com/Illinois-Tech-Projects/Covid-Data-Warehousing-ETL/blob/master/6_reporting/img/tabpy.png?raw=true)
 
-once we have extacted all the data from different sources, we can union them together: 
+
 
 ## Crime Data Cleaning Stage 2: category regrouping/replacing
 ![regrouping_prep.png](https://github.com/Illinois-Tech-Projects/Covid-Data-Warehousing-ETL/blob/master/6_reporting/img/regrouping_prep.png?raw=true)
 
+```Last step was to union crime data and US corona new cases together so we can compare them. ```
 
 ## Visualization 
+
+
 [Tableau Public](https://public.tableau.com/views/ytd_crime/Dashboard2?:display_count=y&publish=yes&:origin=viz_share_link)
 
-Preview
+Video Preview
 [![](https://github.com/Illinois-Tech-Projects/Covid-Data-Warehousing-ETL/blob/master/6_reporting/img/crime_vs_corona.png?raw=true)](https://i.imgur.com/5vq01cA.mp4)
 
