@@ -1,5 +1,5 @@
 # Covid-Data-Warehousing-ETL
-# link to [trello board](https://trello.com/b/YDYSB3Xt/group-1-project)
+# [Trello board](https://trello.com/b/YDYSB3Xt/group-1-project) • [Google Slides](https://docs.google.com/presentation/d/147y-GaIxfaKtQoGj5RWp1g32IdezM2v8BWCAeLH_Nbs/edit?usp=sharinghttps://docs.google.com/presentation/d/147y-GaIxfaKtQoGj5RWp1g32IdezM2v8BWCAeLH_Nbs/edit?usp=sharing)
 
 ## Story Telling:
 1. Does responsive time effect the number of confirmed cases? 
