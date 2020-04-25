@@ -4,7 +4,7 @@
 ## Story Telling:
 1. Does responsive time effect the number of confirmed cases? 
 2. How long did it take for people to treat corona virus seriously?
-3. Does Covid-19 affect crime rate?
+3. [Does Covid-19 affect crime rate?](https://github.com/Illinois-Tech-Projects/Covid-Data-Warehousing-ETL/tree/master/6_reporting/crime_viz)
     - [Crime rates drop across the nation amid coronavirus](https://thehill.com/homenews/state-watch/491055-crime-rates-drop-across-the-nation-amid-coronavirus)
     - [Greenville sees a drop in its crime rate due to coronavirus](https://www.witn.com/content/news/Greenville-sees-a-drop-in-its-crime-rate-due-to-coronavirus-569840881.html)
 
